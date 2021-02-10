@@ -1,4 +1,4 @@
-# Where the call stack is ?
+# What is the call stack ?
 - it's a data structure that uses the Last in first out principle to temporarily store and manage function invocation,
 basically where in the program we are.
 - If we call a function to execute it, we push something on to the stack and when we return from a function
