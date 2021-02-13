@@ -82,6 +82,9 @@ const App = () => {
           {[{key: 'CALL_STACK', text: 'Call Stack'}, {
             key: 'PRIM_REF_TYPES',
             text: 'Primitive and Reference Types'
+          }, {
+            key: 'TYPE_COERCIONS',
+            text: 'Type Coercion'
           }].map((item) => (
             <ListItem button key={item.text} onClick={() => setContentKey(item.key)}>
               <ListItemIcon><InboxIcon/></ListItemIcon>
