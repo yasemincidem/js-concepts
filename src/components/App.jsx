@@ -85,6 +85,9 @@ const App = () => {
           }, {
             key: 'TYPE_COERCIONS',
             text: 'Type Coercion'
+          }, {
+            key: 'DOUBLE_VS_TRIPLE_EQUALS',
+            text: 'Double vs Triple Equals'
           }].map((item) => (
             <ListItem button key={item.text} onClick={() => setContentKey(item.key)}>
               <ListItemIcon><InboxIcon/></ListItemIcon>
