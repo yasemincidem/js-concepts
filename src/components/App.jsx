@@ -88,6 +88,9 @@ const App = () => {
           }, {
             key: 'DOUBLE_VS_TRIPLE_EQUALS',
             text: 'Double vs Triple Equals'
+          }, {
+            key: 'FUNCTION_AND_BLOCK_SCOPES',
+            text: 'Function vs Block Scopes'
           }].map((item) => (
             <ListItem button key={item.text} onClick={() => setContentKey(item.key)}>
               <ListItemIcon><InboxIcon/></ListItemIcon>
