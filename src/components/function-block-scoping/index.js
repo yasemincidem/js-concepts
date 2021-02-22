@@ -147,5 +147,44 @@ printsToBeExecuted.forEach(f => f());
   => the variable declared with var inside the the loop.
   => Loop is not a scope when using var.
   => 
+  `},
+  {code: `
+function saySomething() {
+    var greeting = "Hello";
+    {
+        greeting = "Howdy";  // error comes from here
+        let greeting = "Hi";
+        console.log(greeting);
+    }
+}
+  `, explanation: `
+=> It demonstrates that JS's scope is determined at compile time
+=> The noted ReferenceError occurs from the line with the statement greeting = "Howdy"
+=> What's happening is that the greeting variable for that statement belongs to the declaration on the next line,
+   let greeting = "Hi", rather than to the previous var greeting = "Hello" statement.
+=> The only way the JS engine could know, at the line where the error is thrown, 
+   that the next statement would declare a block-scoped variable of the same name (greeting)
+   is if the JS engine had already processed this code in an earlier pass, and already set up 
+   all the scopes and their variable associations. This processing of scopes and declarations 
+   can only accurately be accomplished by parsing the program before execution.
+  `},
+  {code: `
+Example: Compiled vs Interpreted
+console.log("Howdy");
+
+saySomething("Hello","Hi");
+// Uncaught SyntaxError: Duplicate parameter name not
+// allowed in this context
+
+function saySomething(greeting,greeting) {
+    "use strict";
+    console.log(greeting);
+}
+  `, explanation: `
+=> The "Howdy" message is not printed, despite being a well-formed statement.
+=> It throws an error because of duplicate parameters.
+=> How does the JS engine know that the greeting parameter has been duplicated? 
+=> How does it know that the saySomething(..) function is even in strict-mode while processing the parameter list (the "use strict" pragma appears only later, in the function body)?
+=> The only reasonable explanation is that the code must first be fully parsed before any execution occurs.
   `}
   ];
