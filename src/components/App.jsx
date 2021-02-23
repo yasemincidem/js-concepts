@@ -91,6 +91,9 @@ const App = () => {
           }, {
             key: 'FUNCTION_AND_BLOCK_SCOPES',
             text: 'Function vs Block Scopes'
+          }, {
+            key: 'IIFE_AND_MODULES',
+            text: 'IIFE and modules'
           }].map((item) => (
             <ListItem button key={item.text} onClick={() => setContentKey(item.key)}>
               <ListItemIcon><InboxIcon/></ListItemIcon>
