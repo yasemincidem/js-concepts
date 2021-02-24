@@ -74,7 +74,7 @@ functionOne()
 
 log("Exiting global execution context")
 ```
-![alt text](jsRuntimeEnvironment.png)
+![alt text](jsRuntimeEnvironment.gif)
 Let’s execute the above code line by line
 - "Line 1": As soon as code loads in the browser, JS engine pushes the global execution context in the Execution Context Stack and starts executing the script.
 - "Line 23": When functionOne is called, JS engine pushes functionOne execution context in the Execution Context Stack and starts executing functionOne
