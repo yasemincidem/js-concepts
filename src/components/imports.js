@@ -4,5 +4,6 @@ const {TYPE_COERCIONS} = require('./type-coercion');
 const {DOUBLE_VS_TRIPLE_EQUALS} = require('./double-equals-vs-triple-equals');
 const {FUNCTION_AND_BLOCK_SCOPES} = require('./function-block-scoping');
 const {IIFE_AND_MODULES} = require('./IIFE-and-modules');
+const {TIMERS} = require('./setTimeout-setInterval');
 
-exports.JS_CONCEPTS = {CALL_STACK,PRIM_REF_TYPES, TYPE_COERCIONS, DOUBLE_VS_TRIPLE_EQUALS, FUNCTION_AND_BLOCK_SCOPES, IIFE_AND_MODULES};
+exports.JS_CONCEPTS = {CALL_STACK,PRIM_REF_TYPES, TYPE_COERCIONS, DOUBLE_VS_TRIPLE_EQUALS, FUNCTION_AND_BLOCK_SCOPES, IIFE_AND_MODULES, TIMERS};
