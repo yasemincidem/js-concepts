@@ -4,6 +4,7 @@
 - They are not provided by the JS engine itself but they are provided by browser as part of the window object.
 - In Node, timers are part of the global object, which behaves similarly to the browser’s Window interface.
 This is what the `window`object looks like:
+
 ![alt text](window.png)
 - we can see that both timer functions setTimeout and setInterval are available on the window object
 # What is the setTimeout function syntax
@@ -74,7 +75,9 @@ functionOne()
 
 log("Exiting global execution context")
 ```
+
 ![alt text](jsRuntimeEnvironment.gif)
+
 Let’s execute the above code line by line
 - "Line 1": As soon as code loads in the browser, JS engine pushes the global execution context in the Execution Context Stack and starts executing the script.
 - "Line 23": When functionOne is called, JS engine pushes functionOne execution context in the Execution Context Stack and starts executing functionOne
