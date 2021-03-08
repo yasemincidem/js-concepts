@@ -107,7 +107,7 @@ console.log(orange);
 ```
 - At the compiling step, undefined "apple" and "grape" variables are initialized in the variable environment.
 - The grape initialization is hoisted. Meanwhile, a banana variable is created in the lexical environment.
-![alt text](1.png)
+![alt text](1.jpeg)
 - The execution starts. "apple" is assigned with a value “global apple”, while banana gets “global banana”.
 ![alt text](2.png)
 - When seeing let and const variables in a block scope, the JavaScript creates a separate area for them.
