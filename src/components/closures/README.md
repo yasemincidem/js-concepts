@@ -1,4 +1,8 @@
 # What is closure ?
+- Whenever a function accesses a variable that is declared outside of it, we say it is a closure.
+- Some people will refer to the nested function itself as “the closure” in this example.
+  Others might refer to the technique of accessing the outside variables as the closure.
+  Practically, it doesn’t matter.
 - Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.
 - Closures are exposed functions which can access the scope of their parent even if we call them from the outside.
 - Accessing variables outside of the immediate lexical scope creates a closure
@@ -75,3 +79,33 @@ This expression is most useful when attempting to preserve the global namespace 
 to the closure but will still live throughout runtime. This is a popular means of encapsulating source code for applications and frameworks,
 typically exposing a single global interface in which to interact with.
 # It’s important to note that every function in JavaScript has a closure.
+# What are the practical usages of Closure ?
+1. Using private variables and methods:
+   In JavaScript, we can use private variables and methods using closures. The example below shows the use of private variables with closure.
+```
+var rentPrice = function(initialRent) {
+var rent = initialRent;
+
+// Define private variables for
+// the closure
+return {
+getRent: function() {
+return console.log(rent);
+},
+incRent: function(amount) {
+rent += amount;
+console.log(rent);
+},
+decRent: function(amount) {
+rent -= amount;
+console.log(rent);
+}
+}
+}
+var Rent = rentPrice(8000);
+```
+2. Maintaining state between each function call:
+   Suppose there is a function and one would like it to multiply multiple values together.
+   This could be done with the help of a global variable as they are accessible throughout the program.
+   However, a drawback is that they are prone to change from anywhere in the code. This can be done alternatively using closures.
+   Closures help in maintaining the state between function calls without using a global variable.
