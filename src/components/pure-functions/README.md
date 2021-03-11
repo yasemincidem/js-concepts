@@ -94,7 +94,3 @@ c = updateRes[1]
 - Not all functions need to be , or should be, pure. For example, an event handler for a button press that manipulates the DOM
   is not a good candidate for a pure function.
 - But, the event handler can call other pure functions which will reduce the number of impure functions in your application.
-# What is a mutation ?
-- An immutable value is one that, once created, can never be changed.
-- In JavaScript, primitive values such as numbers, strings and booleans are always immutable.
-- However, data structures like objects and arrays are not.
