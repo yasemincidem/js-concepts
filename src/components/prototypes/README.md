@@ -75,3 +75,13 @@ console.log(person1)
 - When we then created our new Snowbell instance of a cat, it created a new object and sets its prototype to point to the current prototype of the Cat function
 - This really highlights the fact that prototypes really are objects that live in memory. They behave like any other object with regards to pointers.
 - By default, all objects in Javascript inherit from object. And object has no pprotypes.
+
+
+# Pluralsight kyle
+- Every single object is built by a constructor function
+- a constructor makes an object linked to its own prototype
+```
+function Foo(who) {
+this.me = who;
+}
+```
